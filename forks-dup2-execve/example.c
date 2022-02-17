@@ -14,13 +14,13 @@
 
 int	main(int argc, char **argv)
 {
-	printf("---Starting example Program \n");
-	printf("---Printing all my arguments: \n");
+	printf("----Starting example Program \n");
+	printf("----Printing all my arguments: \n");
 	while (*argv)
 	{
-		printf("---%s \n", *argv);
+		printf("----%s \n", *argv);
 		argv++;
 	}
-	printf("---Ending example Program \n");
+	printf("----Ending example Program \n");
 	return (0);
 }
