@@ -4,7 +4,7 @@ A small program to understand & try out the concept of fork, dup2 and execve in 
 
 ### Usage: 
 
-##### 1. Compile the example program:  
+##### 1. Compile the example program:
 >gcc example.c -o example
 
 ##### 2. Compile fork program:         
