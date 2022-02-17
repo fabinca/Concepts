@@ -1,2 +1,2 @@
 # Concepts
-Here I'm trying out / explaining concepts in a simple way. 
+Here I'm trying out concepts in a simple way. 
