@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 13:29:37 by cfabian           #+#    #+#             */
-/*   Updated: 2022/02/17 14:53:35 by cfabian          ###   ########.fr       */
+/*   Updated: 2022/02/17 15:05:56 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*add(void *args)
 	int	j;
 
 	j = ((t_args *)args)->i;
-	usleep(j);
+	usleep(3);
 	i = 0;
 	while (i++ < 10)
 	{
@@ -36,27 +36,25 @@ void	*add(void *args)
 		((t_args *)args)->counter++;
 		printf("Thread: %d, counter: %d\n", j, ((t_args *)args)->counter);
 		pthread_mutex_unlock(&(((t_args *)args)->lock));
-		usleep(1);
+		usleep(6 / j);
 	}
 	return (NULL);
 }
 
 int	main(void)
 {
-	pthread_t	tid[5];
+	pthread_t	tid[3];
 	t_args		*args;
 
 	args = malloc(sizeof(t_args));
 	args->i = -1;
 	args->counter = 0;
-	while (++(args->i) < 5)
+	while (++(args->i) < 3)
 	{
 		pthread_create(&(tid[args->i]), NULL, &add, (void *)args);
 	}
 	pthread_join(tid[0], NULL);
 	pthread_join(tid[1], NULL);
 	pthread_join(tid[2], NULL);
-	pthread_join(tid[3], NULL);
-	pthread_join(tid[4], NULL);
 	return (0);
 }
