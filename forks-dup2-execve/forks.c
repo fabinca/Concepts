@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 10:07:42 by cfabian           #+#    #+#             */
-/*   Updated: 2022/02/17 10:58:06 by cfabian          ###   ########.fr       */
+/*   Updated: 2022/02/17 15:16:38 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 int	main(int argc, char **argv, char **envp)
 {
 	pid_t	pid;
-	int	fd;
+	int		fd;
 
 	printf("My program starts here\n");
 	fd = open("file", O_CREAT | O_TRUNC | O_RDWR, 0644);
