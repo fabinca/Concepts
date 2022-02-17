@@ -1,4 +1,4 @@
-# Tutorials
+# How to use Fork, Dup2 and Execve
 
 A small program to understand & try out the concept of fork, dup2 and execve in C.
 
