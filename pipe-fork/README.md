@@ -3,5 +3,4 @@
 A small program to understand & try out the concept of inter-process-communication in C.
 
 ### Compile & run:                          
-> gcc pipe.c -o pipe
-> ./pipe
+> gcc pipe.c -o pipe && ./pipe
