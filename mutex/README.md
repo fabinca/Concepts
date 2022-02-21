@@ -4,4 +4,5 @@ A small program to understand & try out the concept of pthreads and mutex locks 
 
 ### Compile & run:                          
 > gcc mutex.c -lpthread -o mutex
+> 
 > ./mutex
